@@ -1,0 +1,53 @@
+---
+title: "Exercise1b"
+author: "Dimitri Schmid"
+date: "9/28/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Create 100 samples
+
+First we am creating 100 sample values from a log-normal distribution with mu=1, sigma=0.25.
+
+```{r sampling}
+
+samples<-rlnorm(100, meanlog=1, sdlog=0.25)
+
+```
+
+## Create Histogram
+
+Then we plot our sample data into a histogram
+
+```{r Histogram}
+
+hist(samples)
+
+```
+
+## Distribution on the log scale
+
+We plot the distribution on the log scale for the samples
+
+```{r Distribution}
+
+hist(log(samples))
+
+```
+
+## mean and variance
+
+We are providing the mean and variance of our exercise1b samples.
+
+
+```{r mean and variance}
+
+mean(samples)
+
+var(samples)
+
+```
